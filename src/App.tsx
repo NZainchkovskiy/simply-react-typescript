@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Accordion } from "./Accordion";
+import { IItem } from "./model/IItem";
+
+const items: IItem[] = [
+  {
+    id: 0,
+    title: "first",
+    contents: "first content",
+  },
+  {
+    id: 1,
+    title: "second",
+    contents: "second content",
+  },
+  {
+    id: 2,
+    title: "third",
+    contents: "third content",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Accordion items={items} />
     </div>
   );
 }
